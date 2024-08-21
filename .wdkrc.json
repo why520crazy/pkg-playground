@@ -1,0 +1,14 @@
+{
+  "onPromises": {
+    "isBundle": false,
+    "entry": "./dist/app/index.js",
+    "output": "./dist/on-premises",
+    "doNodeFiles": ["node_modules/**/*.node"],
+    "scripts": ["node_modules/axios/dist/node/axios.cjs"],
+    "assets": [
+      "node_modules/assets/**/**",
+      "assets/**/**"
+    ],
+    "nodeModulesPath": "./dist/app/node_modules"
+  }
+}

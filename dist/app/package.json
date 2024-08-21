@@ -1,0 +1,19 @@
+{
+  "name": "pkg-test-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pkg-old": "rm -rf dist/pkg-test-demo && pkg ./package.json --debug",
+    "pkg-tmp": "rm -rf dist/agile-on-premises/test-demo-node18-macos-arm64 && pkg ./dist/agile-on-premises/.tmp/index.js -c ./dist/agile-on-premises/.tmp/.pkg.config.json --debug",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkg": "wdk pkg --name test-demo --target node18-macos-arm64 --bypass-verify",
+    "postinstall": "node ../../scripts/symlink.js"
+  },
+  "bin": "dist/app/index.js",
+  "author": "why520crazy",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "axios": "1.7.2"
+  }
+}
